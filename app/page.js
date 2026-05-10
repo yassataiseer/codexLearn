@@ -17,17 +17,37 @@ export default function HomePage() {
       }}
     >
       <h1>Simple Counter</h1>
-      <button
-        type="button"
-        onClick={() => setCount((current) => current + 1)}
+      <div
         style={{
-          padding: '0.75rem 1.5rem',
-          fontSize: '1rem',
-          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
         }}
       >
-        Count: {count}
-      </button>
+        <button
+          type="button"
+          onClick={() => setCount((current) => current - 1)}
+          style={{
+            padding: '0.75rem 1.5rem',
+            fontSize: '1rem',
+            cursor: 'pointer',
+          }}
+        >
+          Decrease
+        </button>
+        <span style={{ fontSize: '1.25rem' }}>Count: {count}</span>
+        <button
+          type="button"
+          onClick={() => setCount((current) => current + 1)}
+          style={{
+            padding: '0.75rem 1.5rem',
+            fontSize: '1rem',
+            cursor: 'pointer',
+          }}
+        >
+          Increase
+        </button>
+      </div>
       <p>Refresh the page and the counter resets to 0.</p>
     </main>
   );
